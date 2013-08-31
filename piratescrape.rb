@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'open-uri'
+require 'json'
 require 'pp'
 
 def fetch_magnet(query)
@@ -10,25 +11,42 @@ def fetch_magnet(query)
 
   doc = Nokogiri::HTML(open("http://thepiratebay.sx/search/" + url + "/0/7/0"))
 
-  magnet = ""
-  title = ""
-  size = ""
+  torrents = doc.css("#searchResult > tr")
 
-  torrent = doc.css("#searchResult > tr")
+  results = Array.new(torrents.length) { Hash.new }
 
-  results = Hash.new
-
-  torrent.length.times do |current|
-    puts current
-    #puts "(#{current}):\t[#{torrent[current].css("td")[1].css("div.detName a").first.content}]?" #Naam
-    #puts "\t#{torrent[current].css("td")[2].inner_text} Seeders\n\t#{torrent[current].css("td")[0].css("center a")[1].content}\n\n" #seeders en categorie
-    #puts "#{torrent[current].css("td")[1].css("> a")[0]["href"]}" #magnet link
-    #puts "Downloaden? (y,n,q)"
-    #answer = gets.chomp
-    #command = torrent[current].css('td')[1].css('> a')[0]['href']
+  #Here's to hoping nobody will ever read this disastercode
+  #DONT LOOK AT ME LIKE THAT!
+  torrents.length.times do |current| result = results[current]
+    torrent = torrents[current]
+    result["name"] = torrent.css("td")[1].css("div.detName a")[0].inner_text
+    result["magnet"] = torrent.css("td")[1].css("a")[1].attr("href")
+    result["uploader"] = Hash.new
+      result["uploader"]["name"] = torrent.css("td")[1].css("a")[2].attr("href").sub('/user/', '').sub('/','')
+      #if torrent.css("td")[1].css("a")[2].css("img").attr("alt").inner_text == "VIP"
+      #  result["uploader"]["trusted"] == true
+      #else
+      #  result["uploader"]["trusted"] == false
+      #end
+    result["date"] = torrent.css("td")[1].css("font").inner_text.split(",")[0].split(/ /)[1]
+    result["size"] = torrent.css("td")[1].css("font").inner_text.split(",")[1].split(/ /).reject!{|b| b ==""}[1]
+    result["category"] = Hash.new
+      result["category"]["main"] = torrent.css("td")[0].css("a")[0].inner_text
+      result["category"]["sub"] = torrent.css("td")[0].css("a")[1].inner_text
+    result["peers"] = Hash.new
+      result["peers"]["leeches"] = torrent.css("td")[3].inner_text.to_i
+      result["peers"]["seeds"] = torrent.css("td")[2].inner_text.to_i
+      if result["peers"]["leeches"] == 0
+        result["peers"]["ratio"] = result["peers"]["seeds"]
+      elsif result["peers"]["seeders"] == 0
+        result["peers"]["ratio"] = 0
+      else
+        result["peers"]["ratio"] = results[current]["peers"]["seeds"]/results[current]["peers"]["leeches"]
+      end
   end
+
+  puts JSON.generate(results)
 
 end
 
-#puts "Wat wil je downloaden?"
 fetch_magnet(ARGV[0])

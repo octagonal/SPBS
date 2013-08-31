@@ -24,7 +24,7 @@ date
 size
   .css("td")[1].css("font").inner_text.split(",")[1].split(/ /).reject!{|b| b ==""}[1]
 
-seeders
+seedetr
   .css("td")[2]
 
 leechers
