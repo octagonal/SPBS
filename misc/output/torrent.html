@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Pirate Bay - The galaxy's most resilient bittorrent site</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Search The Pirate Bay">
+<link rel="stylesheet" type="text/css" href="/static/css-new/pirate6.css">
+<style type="text/css">
+		.searchBox{
+			margin: 6px;
+			width: 300px;
+			vertical-align: middle;
+			padding: 2px;
+		        background-image:url('/static/img/icon-https.gif');
+        		background-repeat:no-repeat;
+		        background-position: right;
+		}
+
+		.detLink {
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+		.detDesc {
+			color: #4e5456;
+		}
+		.detDesc a:hover {
+			color: #000099;
+			text-decoration: underline;
+		}
+		.sortby {
+			text-align: left;
+			float: left;
+		}
+		.detName {
+			padding-top: 3px;
+			padding-bottom: 2px;
+		}
+		.viewswitch {
+			font-style: normal;
+			float: right;
+			text-align: right;
+			font-weight: normal;
+		}
+	</style>
+<script src="/static/js/tpb.js" type="text/javascript"></script><style type="text/css">
+		table#sponsoredLinks a { border: 0; }
+		table#sponsoredLinks a:hover { text-decoration: underline; }
+                table#sponsoredLinks td.downbut a {border: none;}
+                table#sponsoredLinks {min-width: 400px; text-align: left; width: 100%; margin: 0 0 10px 0; border-left: solid 1px #ffffff;}
+                table#sponsoredLinks th {padding: 7px; background-color: #D2B9A6;}
+		table#sponsoredLinks td {padding: 2px 4px; background-color: #F6F1EE; font-weight: bold; font-style: italic; text-align: right; white-space: nowrap;}
+                table#sponsoredLinks td img {border: 0;}
+                table#sponsoredLinks td.first {font-style: normal; text-align: left;}
+                table#sponsoredLinks td.first img {margin: 0 5px 0 0; vertical-align: -7px;}
+                table#sponsoredLinks tr:hover td {background-color: #FFFFFF;}
+                table#sponsoredLinks td.downbut {width: 170px;}
+        </style>
+<script language="javascript" type="text/javascript">if (top.location != self.location) {top.location.replace(self.location);}</script>
+</head>
+<body>
+
+
+	<div id="header">
+
+
+		<div class="ad">
+		 <iframe src="http://cdn1.adexprt.com/exo_na/top.html" width="468" height="60" frameborder="0" scrolling="no"></iframe>
+		</div>
+			<form method="get" id="q" action="/s/">
+			<a href="/" class="img"><img src="/static/img/tpblogo_sm_ny.gif" id="TPBlogo" alt="The Pirate Bay"></a>
+			<b><a href="/" title="Search Torrents">Search Torrents</a></b>  | 
+			<a href="/browse" title="Browse Torrents">Browse Torrents</a>  | 
+			<a href="/recent" title="Recent Torrent">Recent Torrents</a>  | 
+			<a href="/tv" title="TV shows">TV shows</a>  | 
+			<a href="/music" title="Music">Music</a>  | 
+			<a href="/top" title="Top 100">Top 100</a>
+			<br><input type="search" class="inputbox" title="Pirate Search" name="q" placeholder="Search here..." value="aphex twin"><input value="Pirate Search" type="submit" class="submitbutton"><br><label for="audio" title="Audio"><input id="audio" name="audio" onclick="javascript:rmAll();" type="checkbox">Audio</label>
+			<label for="video" title="Video"><input id="video" name="video" onclick="javascript:rmAll();" type="checkbox">Video</label>
+			<label for="apps" title="Applications"><input id="apps" name="apps" onclick="javascript:rmAll();" type="checkbox">Applications</label>
+			<label for="games" title="Games"><input id="games" name="games" onclick="javascript:rmAll();" type="checkbox">Games</label>
+			<label for="other" title="Other"><input id="other" name="other" onclick="javascript:rmAll();" type="checkbox">Other</label>
+
+			<select id="category" name="category" onchange="javascript:setAll();"><option value="0">All</option>
+<optgroup label="Audio">
+<option value="101">Music</option>
+<option value="102">Audio books</option>
+<option value="103">Sound clips</option>
+<option value="104">FLAC</option>
+<option value="199">Other</option>
+</optgroup>
+<optgroup label="Video">
+<option value="201">Movies</option>
+<option value="202">Movies DVDR</option>
+<option value="203">Music videos</option>
+<option value="204">Movie clips</option>
+<option value="205">TV shows</option>
+<option value="206">Handheld</option>
+<option value="207">HD - Movies</option>
+<option value="208">HD - TV shows</option>
+<option value="209">3D</option>
+<option value="299">Other</option>
+</optgroup>
+<optgroup label="Applications">
+<option value="301">Windows</option>
+<option value="302">Mac</option>
+<option value="303">UNIX</option>
+<option value="304">Handheld</option>
+<option value="305">IOS (iPad/iPhone)</option>
+<option value="306">Android</option>
+<option value="399">Other OS</option>
+</optgroup>
+<optgroup label="Games">
+<option value="401">PC</option>
+<option value="402">Mac</option>
+<option value="403">PSx</option>
+<option value="404">XBOX360</option>
+<option value="405">Wii</option>
+<option value="406">Handheld</option>
+<option value="407">IOS (iPad/iPhone)</option>
+<option value="408">Android</option>
+<option value="499">Other</option>
+</optgroup>
+<optgroup label="Other">
+<option value="601">E-books</option>
+<option value="602">Comics</option>
+<option value="603">Pictures</option>
+<option value="604">Covers</option>
+<option value="605">Physibles</option>
+<option value="699">Other</option>
+</optgroup></select><input type="hidden" name="page" value="0"><input type="hidden" name="orderby" value="99">
+</form>
+	</div>
+<!-- // div:header -->
+
+	<h2>
+<span>Search results: aphex twin</span> Displaying hits from 1 to 30 (approx 110 found)</h2>
+<div id="SearchResults"><div id="content">
+			<div id="sky-right">
+				 <iframe src="http://cdn1.adexprt.com/exo_na/sky2.html" width="160" height="600" frameborder="0" scrolling="no" style="padding-top: 100px"></iframe>
+			</div>
+	<div id="main-content">
+
+		 <iframe src="http://cdn2.adexprt.com/exo_na/center.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+	<table id="searchResult">
+<thead id="tableHead"><tr class="header">
+<th><a href="/search/aphex%20twin/0/13/0" title="Order by Type">Type</a></th>
+			<th>
+<div class="sortby">
+<a href="/search/aphex%20twin/0/1/0" title="Order by Name">Name</a> (Order by: <a href="/search/aphex%20twin/0/3/0" title="Order by Uploaded">Uploaded</a>, <a href="/search/aphex%20twin/0/5/0" title="Order by Size">Size</a>, <span style="white-space: nowrap;"><a href="/search/aphex%20twin/0/11/0" title="Order by ULed by">ULed by</a></span>, <a href="/search/aphex%20twin/0/8/0" title="Order by Seeders">SE</a>, <a href="/search/aphex%20twin/0/9/0" title="Order by Leechers">LE</a>)</div>
+<div class="viewswitch"> View: <a href="/switchview.php?view=s">Single</a> / Double </div>
+</th>
+			<th><abbr title="Seeders"><a href="/search/aphex%20twin/0/8/0" title="Order by Seeders">SE</a></abbr></th>
+			<th><abbr title="Leechers"><a href="/search/aphex%20twin/0/9/0" title="Order by Leechers">LE</a></abbr></th>
+		</tr></thead>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/8005264/Aphex_Twin_Discography_320kbps" class="detLink" title="Details for Aphex Twin Discography 320kbps">Aphex Twin Discography 320kbps</a>
+</div>
+<a href="magnet:?xt=urn:btih:b35c01a402ed620e3574dd71528b7483a4fcb5f9&amp;dn=Aphex+Twin+Discography+320kbps&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 3 comments." title="This torrent has 3 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 01-11 02:31, Size 2.14 GiB, ULed by <a class="detDesc" href="/user/nrs321/" title="Browse nrs321">nrs321</a></font>
+		</td>
+		<td align="right">89</td>
+		<td align="right">23</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3251408/Aphex_Twin_-_Selected_Ambient_Works_Volume_II" class="detLink" title="Details for Aphex Twin - Selected Ambient Works Volume II">Aphex Twin - Selected Ambient Works Volume II</a>
+</div>
+<a href="magnet:?xt=urn:btih:c410c1ce9153545f4e21c7e58a145ce715acb155&amp;dn=Aphex+Twin+-+Selected+Ambient+Works+Volume+II&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 14 comments." title="This torrent has 14 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 10-27 2004, Size 287.14 MiB, ULed by <a class="detDesc" href="/user/sikboy/" title="Browse sikboy">sikboy</a></font>
+		</td>
+		<td align="right">55</td>
+		<td align="right">2</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/4117705/Aphex_Twin_-_Selected_Ambient_Works_85-92_(1992)_%5BAAC_VBR%5D" class="detLink" title="Details for Aphex Twin - Selected Ambient Works 85-92 (1992) [AAC VBR]">Aphex Twin - Selected Ambient Works 85-92 (1992) [AAC VBR]</a>
+</div>
+<a href="magnet:?xt=urn:btih:ee579f440583906b2030df0a73139bc2716ffdc6&amp;dn=Aphex+Twin+-+Selected+Ambient+Works+85-92+%281992%29+%5BAAC+VBR%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 04-05 2008, Size 146.68 MiB, ULed by <a class="detDesc" href="/user/sparko/" title="Browse sparko">sparko</a></font>
+		</td>
+		<td align="right">44</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3252228/Aphex_Twin_-_Richard_D._James_Album" class="detLink" title="Details for Aphex Twin - Richard D. James Album">Aphex Twin - Richard D. James Album</a>
+</div>
+<a href="magnet:?xt=urn:btih:07b6899a980e53d6e480a1ce67f4c5ed140720ac&amp;dn=Aphex+Twin+-+Richard+D.+James+Album&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 3 comments." title="This torrent has 3 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 10-31 2004, Size 60.36 MiB, ULed by <a class="detDesc" href="/user/sikboy/" title="Browse sikboy">sikboy</a></font>
+		</td>
+		<td align="right">28</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/199" title="More from this category">Other</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/7090234/Aphex_Twin_Discography" class="detLink" title="Details for Aphex Twin Discography">Aphex Twin Discography</a>
+</div>
+<a href="magnet:?xt=urn:btih:91f19526753a7e10d2c8323434dc4d59e819687d&amp;dn=Aphex+Twin+Discography&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 03-10 2012, Size 2.39 GiB, ULed by <a class="detDesc" href="/user/ratattak/" title="Browse ratattak">ratattak</a></font>
+		</td>
+		<td align="right">24</td>
+		<td align="right">6</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3539329/Complete_discography_of_Aphex_Twin_(55_albums)" class="detLink" title="Details for Complete discography of Aphex Twin (55 albums)">Complete discography of Aphex Twin (55 albums)</a>
+</div>
+<a href="magnet:?xt=urn:btih:bb9ed0889491e6b1e6ec7d6f11c7e833b8bf3fde&amp;dn=Complete+discography+of+Aphex+Twin+%2855+albums%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 38 comments." title="This torrent has 38 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 10-14 2006, Size 2.39 GiB, ULed by <a class="detDesc" href="/user/seej/" title="Browse seej">seej</a></font>
+		</td>
+		<td align="right">22</td>
+		<td align="right">6</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3599486/Aphex_Twin_-_I_Care_because_You_do" class="detLink" title="Details for Aphex Twin - I Care because You do">Aphex Twin - I Care because You do</a>
+</div>
+<a href="magnet:?xt=urn:btih:760eccc3a2116e49c06308e27a9b0aabb63d1cc1&amp;dn=Aphex+Twin+-+I+Care+because+You+do&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 4 comments." title="This torrent has 4 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 01-20 2007, Size 87.76 MiB, ULed by <a class="detDesc" href="/user/mrHorris/" title="Browse mrHorris">mrHorris</a></font>
+		</td>
+		<td align="right">19</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br>
+				(<a href="/browse/201" title="More from this category">Movies</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3502288/Morvern_Callar_(2002)_-_Lynne_Ramsay_-_Music_by_Aphex_Twin__Ster" class="detLink" title="Details for Morvern Callar (2002) - Lynne Ramsay - Music by Aphex Twin, Ster">Morvern Callar (2002) - Lynne Ramsay - Music by Aphex Twin, Ster</a>
+</div>
+<a href="magnet:?xt=urn:btih:4da08de1fa8af831a38b96366bf100142d5afc7f&amp;dn=Morvern+Callar+%282002%29+-+Lynne+Ramsay+-+Music+by+Aphex+Twin%2C+Ster&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 6 comments." title="This torrent has 6 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 07-10 2006, Size 698.09 MiB, ULed by <a class="detDesc" href="/user/simonkall/" title="Browse simonkall">simonkall</a></font>
+		</td>
+		<td align="right">17</td>
+		<td align="right">2</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3275888/Aphex_Twin_-_Drukqs_(2001)" class="detLink" title="Details for Aphex Twin - Drukqs (2001)">Aphex Twin - Drukqs (2001)</a>
+</div>
+<a href="magnet:?xt=urn:btih:bf590a7b100e353445365fcca737cb4118633bdb&amp;dn=Aphex+Twin+-+Drukqs+%282001%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 8 comments." title="This torrent has 8 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 01-12 2005, Size 114.87 MiB, ULed by <a class="detDesc" href="/user/OBViking/" title="Browse OBViking">OBViking</a></font>
+		</td>
+		<td align="right">17</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3252230/Aphex_Twin_-_Come_to_Daddy" class="detLink" title="Details for Aphex Twin - Come to Daddy">Aphex Twin - Come to Daddy</a>
+</div>
+<a href="magnet:?xt=urn:btih:6da3f127ff0eab5e0b6a40d6616630982ff328f6&amp;dn=Aphex+Twin+-+Come+to+Daddy&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 10-31 2004, Size 61.21 MiB, ULed by <a class="detDesc" href="/user/sikboy/" title="Browse sikboy">sikboy</a></font>
+		</td>
+		<td align="right">15</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3288082/Aphex_Twin_-_Window_Licker_1999_%5B256%5D" class="detLink" title="Details for Aphex Twin - Window Licker 1999 [256]">Aphex Twin - Window Licker 1999 [256]</a>
+</div>
+<a href="magnet:?xt=urn:btih:ec895e566fb4c554972b97173e383c4622b78b3b&amp;dn=Aphex+Twin+-+Window+Licker+1999+%5B256%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 02-10 2005, Size 29.47 MiB, ULed by <a class="detDesc" href="/user/pah/" title="Browse pah">pah</a></font>
+		</td>
+		<td align="right">12</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/5203962/APHEX_TWIN_-_Drukqs_2CD_2001" class="detLink" title="Details for APHEX TWIN - Drukqs 2CD 2001">APHEX TWIN - Drukqs 2CD 2001</a>
+</div>
+<a href="magnet:?xt=urn:btih:fb9d90de926c84e4aa0eabca314960c4713ccc98&amp;dn=APHEX+TWIN+-+Drukqs+2CD+2001&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments."><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 12-08 2009, Size 515.06 MiB, ULed by <a class="detDesc" href="/user/lioliolio/" title="Browse lioliolio">lioliolio</a></font>
+		</td>
+		<td align="right">12</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/7228200/Aphex_Twin_-_Come_to_Daddy_EP_(1997_MP3_320kbps)" class="detLink" title="Details for Aphex Twin - Come to Daddy EP (1997 MP3@320kbps)">Aphex Twin - Come to Daddy EP (1997 MP3@320kbps)</a>
+</div>
+<a href="magnet:?xt=urn:btih:f9f9e5edfae3398c6c53ce9acebdd2811d71f845&amp;dn=Aphex+Twin+-+Come+to+Daddy+EP+%281997+MP3%40320kbps%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><a href="/user/HobbitTunez"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border="0"></a><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 04-30 2012, Size 77.51 MiB, ULed by <a class="detDesc" href="/user/HobbitTunez/" title="Browse HobbitTunez">HobbitTunez</a></font>
+		</td>
+		<td align="right">12</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3722506/Aphex_Twin_-_1993_-_Selected_Ambient_Works_85-92_%5BFLAC%5D" class="detLink" title="Details for Aphex Twin - 1993 - Selected Ambient Works 85-92 [FLAC]">Aphex Twin - 1993 - Selected Ambient Works 85-92 [FLAC]</a>
+</div>
+<a href="magnet:?xt=urn:btih:3a73cce1bc439c5e82d1c827f1fc74f83b185513&amp;dn=Aphex+Twin+-+1993+-+Selected+Ambient+Works+85-92+%5BFLAC%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 11 comments." title="This torrent has 11 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 06-24 2007, Size 457.34 MiB, ULed by <a class="detDesc" href="/user/tzongue/" title="Browse tzongue">tzongue</a></font>
+		</td>
+		<td align="right">10</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3722671/Aphex_Twin_-_2003_-_26_Mixes_For_Cash_%5BFLAC%5D" class="detLink" title="Details for Aphex Twin - 2003 - 26 Mixes For Cash [FLAC]">Aphex Twin - 2003 - 26 Mixes For Cash [FLAC]</a>
+</div>
+<a href="magnet:?xt=urn:btih:034a5dfa739485d5a3147fd978cf73b09ae914ce&amp;dn=Aphex+Twin+-+2003+-+26+Mixes+For+Cash+%5BFLAC%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3722671/Aphex_Twin_-_2003_-_26_Mixes_For_Cash_%5BFLAC%5D.3722671.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 3 comments." title="This torrent has 3 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 06-24 2007, Size 795.27 MiB, ULed by <a class="detDesc" href="/user/tzongue/" title="Browse tzongue">tzongue</a></font>
+		</td>
+		<td align="right">9</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/7968722/Aphex_Twin_--_Selected_Ambient_Works_85-92_%5BFLAC%5D" class="detLink" title="Details for Aphex Twin -- Selected Ambient Works 85-92 [FLAC]">Aphex Twin -- Selected Ambient Works 85-92 [FLAC]</a>
+</div>
+<a href="magnet:?xt=urn:btih:569b525a46c3b86dddbb19d2fc1e7c4a5a1c7f01&amp;dn=Aphex+Twin+--+Selected+Ambient+Works+85-92+%5BFLAC%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/7968722/Aphex_Twin_--_Selected_Ambient_Works_85-92_%5BFLAC%5D.7968722.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 12-29 2012, Size 454.22 MiB, ULed by <a class="detDesc" href="/user/AcridAvid/" title="Browse AcridAvid">AcridAvid</a></font>
+		</td>
+		<td align="right">9</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3573820/AFX_(Aphex_Twin)_-_Analord_Vol._1_through_11_(FLAC_Vinyl_Rip)" class="detLink" title="Details for AFX (Aphex Twin) - Analord Vol. 1 through 11 (FLAC Vinyl Rip)">AFX (Aphex Twin) - Analord Vol. 1 through 11 (FLAC Vinyl Rip)</a>
+</div>
+<a href="magnet:?xt=urn:btih:a2ebc71b76b3a4b4bee5f9c90cb1f0e248ae6bfd&amp;dn=AFX+%28Aphex+Twin%29+-+Analord+Vol.+1+through+11+%28FLAC+Vinyl+Rip%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3573820/AFX_(Aphex_Twin)_-_Analord_Vol._1_through_11_(FLAC_Vinyl_Rip).3573820.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 20 comments." title="This torrent has 20 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 12-09 2006, Size 1.06 GiB, ULed by <a class="detDesc" href="/user/werdwerdus/" title="Browse werdwerdus">werdwerdus</a></font>
+		</td>
+		<td align="right">9</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3530778/Aphex.Twin.2006.Aphex.Cholexion.MP3.COLLECTION-STABiL" class="detLink" title="Details for Aphex.Twin.2006.Aphex.Cholexion.MP3.COLLECTION-STABiL">Aphex.Twin.2006.Aphex.Cholexion.MP3.COLLECTION-STABiL</a>
+</div>
+<a href="magnet:?xt=urn:btih:b9320b144b7d27cf4ce834fd7e4912dd8c7f90cf&amp;dn=Aphex.Twin.2006.Aphex.Cholexion.MP3.COLLECTION-STABiL&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3530778/Aphex.Twin.2006.Aphex.Cholexion.MP3.COLLECTION-STABiL.3530778.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 8 comments." title="This torrent has 8 comments."><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><a href="/user/karpo1"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border="0"></a>
+			<font class="detDesc">Uploaded 09-28 2006, Size 687.43 MiB, ULed by <a class="detDesc" href="/user/karpo1/" title="Browse karpo1">karpo1</a></font>
+		</td>
+		<td align="right">9</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/7991760/APHEX_TWIN_Analord_Volumes_1-11_(vinyl)_320kps" class="detLink" title="Details for APHEX TWIN Analord Volumes 1-11 (vinyl) 320kps">APHEX TWIN Analord Volumes 1-11 (vinyl) 320kps</a>
+</div>
+<a href="magnet:?xt=urn:btih:8c8ebc513487fe022695050bfe5c7bf406bf6336&amp;dn=APHEX+TWIN+Analord+Volumes+1-11+%28vinyl%29+320kps&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/7991760/APHEX_TWIN_Analord_Volumes_1-11_(vinyl)_320kps.7991760.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><a href="/user/rjordan21"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border="0"></a><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 01-06 03:07, Size 485.24 MiB, ULed by <a class="detDesc" href="/user/rjordan21/" title="Browse rjordan21">rjordan21</a></font>
+		</td>
+		<td align="right">8</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/7250416/Aphex_Twin__quot_Windowlicker_quot__(1999)_%5BFLAC_ALAC%5D" class="detLink" title='Details for Aphex Twin "Windowlicker" (1999) [FLAC/ALAC]'>Aphex Twin "Windowlicker" (1999) [FLAC/ALAC]</a>
+</div>
+<a href="magnet:?xt=urn:btih:d95970fc201af2db9f085fa7c7f8a6ff7ee6f64d&amp;dn=Aphex+Twin+%26quot%3BWindowlicker%26quot%3B+%281999%29+%5BFLAC%2FALAC%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><img src="/static/img/11x11p.png"><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 05-07 2012, Size 205.43 MiB, ULed by <a class="detDesc" href="/user/WuFLAC/" title="Browse WuFLAC">WuFLAC</a></font>
+		</td>
+		<td align="right">8</td>
+		<td align="right">3</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br>
+				(<a href="/browse/201" title="More from this category">Movies</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3554869/Scoop.2006.iTALiAN.by.aphex_twin" class="detLink" title="Details for Scoop.2006.iTALiAN.by.aphex_twin">Scoop.2006.iTALiAN.by.aphex_twin</a>
+</div>
+<a href="magnet:?xt=urn:btih:d0a0a7496140abf4e690c1fc10c6e0ee9a1b4a22&amp;dn=Scoop.2006.iTALiAN.by.aphex_twin&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3554869/Scoop.2006.iTALiAN.by.aphex_twin.3554869.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><a href="/user/zerocoll"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border="0"></a><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 11-10 2006, Size 688.37 MiB, ULed by <a class="detDesc" href="/user/zerocoll/" title="Browse zerocoll">zerocoll</a></font>
+		</td>
+		<td align="right">7</td>
+		<td align="right">2</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3252240/Aphex_Twin_-_Classics" class="detLink" title="Details for Aphex Twin - Classics">Aphex Twin - Classics</a>
+</div>
+<a href="magnet:?xt=urn:btih:6372a79b076c1ccdbbf07d73df8a1df2c05fa689&amp;dn=Aphex+Twin+-+Classics&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3252240/Aphex_Twin_-_Classics.3252240.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 10-31 2004, Size 135.8 MiB, ULed by <a class="detDesc" href="/user/sikboy/" title="Browse sikboy">sikboy</a></font>
+		</td>
+		<td align="right">7</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3722517/Polygon_Window_(aphex_twin)_-_1993_-_Surfing_on_Sine_Waves_%5BFLAC" class="detLink" title="Details for Polygon Window (aphex twin) - 1993 - Surfing on Sine Waves [FLAC">Polygon Window (aphex twin) - 1993 - Surfing on Sine Waves [FLAC</a>
+</div>
+<a href="magnet:?xt=urn:btih:ded40416086ea3ec443b659ff8cc0f9aafcc0aa5&amp;dn=Polygon+Window+%28aphex+twin%29+-+1993+-+Surfing+on+Sine+Waves+%5BFLAC&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3722517/Polygon_Window_(aphex_twin)_-_1993_-_Surfing_on_Sine_Waves_%5BFLAC.3722517.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 06-24 2007, Size 317.92 MiB, ULed by <a class="detDesc" href="/user/tzongue/" title="Browse tzongue">tzongue</a></font>
+		</td>
+		<td align="right">6</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3521670/Aphex_Twin_-_Melodies_From_Mars_(320_kbps)" class="detLink" title="Details for Aphex Twin - Melodies From Mars (320 kbps)">Aphex Twin - Melodies From Mars (320 kbps)</a>
+</div>
+<a href="magnet:?xt=urn:btih:3c66c7edddaa374bcc71ab79713f6c7beb258b41&amp;dn=Aphex+Twin+-+Melodies+From+Mars+%28320+kbps%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3521670/Aphex_Twin_-_Melodies_From_Mars_(320_kbps).3521670.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 8 comments." title="This torrent has 8 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 09-09 2006, Size 63.77 MiB, ULed by <a class="detDesc" href="/user/Om-ega/" title="Browse Om-ega">Om-ega</a></font>
+		</td>
+		<td align="right">6</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/5226218/Prodigy_-_Breathe_(Aphex_Twin_Remix)" class="detLink" title="Details for Prodigy - Breathe (Aphex Twin Remix)">Prodigy - Breathe (Aphex Twin Remix)</a>
+</div>
+<a href="magnet:?xt=urn:btih:f950dff142ac302f950293648f250245a99b226c&amp;dn=Prodigy+-+Breathe+%28Aphex+Twin+Remix%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/5226218/Prodigy_-_Breathe_(Aphex_Twin_Remix).5226218.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments."><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><a href="/user/zerothdegree"><img src="/static/img/trusted.png" alt="Trusted" title="Trusted" style="width:11px;" border="0"></a>
+			<font class="detDesc">Uploaded 12-18 2009, Size 6.25 MiB, ULed by <a class="detDesc" href="/user/zerothdegree/" title="Browse zerothdegree">zerothdegree</a></font>
+		</td>
+		<td align="right">6</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/3722512/AFX_(aphex_twin)_-_2006_-_Chosen_Lords_%5BFLAC%5D" class="detLink" title="Details for AFX (aphex twin) - 2006 - Chosen Lords [FLAC]">AFX (aphex twin) - 2006 - Chosen Lords [FLAC]</a>
+</div>
+<a href="magnet:?xt=urn:btih:7a59a402310a69334a65c0d3c51b6544e588403b&amp;dn=AFX+%28aphex+twin%29+-+2006+-+Chosen+Lords+%5BFLAC%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/3722512/AFX_(aphex_twin)_-_2006_-_Chosen_Lords_%5BFLAC%5D.3722512.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 06-24 2007, Size 346.96 MiB, ULed by <a class="detDesc" href="/user/tzongue/" title="Browse tzongue">tzongue</a></font>
+		</td>
+		<td align="right">5</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/6076783/va_warp20_chosen_(aphex_twin__squarepusher__boards_of_canada)" class="detLink" title="Details for va warp20 chosen (aphex twin, squarepusher, boards of canada)">va warp20 chosen (aphex twin, squarepusher, boards of canada)</a>
+</div>
+<a href="magnet:?xt=urn:btih:b39326ee7dafa82e5dd914660d9df102f7ac1039&amp;dn=va+warp20+chosen+%28aphex+twin%2C+squarepusher%2C+boards+of+canada%29&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/6076783/va_warp20_chosen_(aphex_twin__squarepusher__boards_of_canada).6076783.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/11x11p.png"><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 01-01 2011, Size 209.73 MiB, ULed by <a class="detDesc" href="/user/idmqueen/" title="Browse idmqueen">idmqueen</a></font>
+		</td>
+		<td align="right">5</td>
+		<td align="right">1</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/8733608/...I_Care_Because_You_Do_-_Aphex_Twin_%5B1995%5D_-_Lossy" class="detLink" title="Details for ...I Care Because You Do - Aphex Twin [1995] - Lossy">...I Care Because You Do - Aphex Twin [1995] - Lossy</a>
+</div>
+<a href="magnet:?xt=urn:btih:df3291bb89e849c2415e6907303d59b087e95a06&amp;dn=...I+Care+Because+You+Do+-+Aphex+Twin+%5B1995%5D+-+Lossy&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/8733608/...I_Care_Because_You_Do_-_Aphex_Twin_%5B1995%5D_-_Lossy.8733608.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_image.gif" alt="This torrent has a cover image" title="This torrent has a cover image"><img src="/static/img/11x11p.png"><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 07-24 05:56, Size 151.06 MiB, ULed by <a class="detDesc" href="/user/Xern0n/" title="Browse Xern0n">Xern0n</a></font>
+		</td>
+		<td align="right">5</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/101" title="More from this category">Music</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/6071646/va_-_warp_records_witof2003_(aphex_twin__autechre__plaid__veneti" class="detLink" title="Details for va - warp records witof2003 (aphex twin, autechre, plaid, veneti">va - warp records witof2003 (aphex twin, autechre, plaid, veneti</a>
+</div>
+<a href="magnet:?xt=urn:btih:e648fdd67ee52c668286a062918e11501a57fbb4&amp;dn=va+-+warp+records+witof2003+%28aphex+twin%2C+autechre%2C+plaid%2C+veneti&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/6071646/va_-_warp_records_witof2003_(aphex_twin__autechre__plaid__veneti.6071646.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/11x11p.png"><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 12-29 2010, Size 57.12 MiB, ULed by <a class="detDesc" href="/user/idmqueen/" title="Browse idmqueen">idmqueen</a></font>
+		</td>
+		<td align="right">4</td>
+		<td align="right">0</td>
+	</tr>
+<tr>
+<td class="vertTh">
+			<center>
+				<a href="/browse/100" title="More from this category">Audio</a><br>
+				(<a href="/browse/104" title="More from this category">FLAC</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/8229175/Aphex_Twin_-_Selected_Ambient_Works_Volume_2_" class="detLink" title="Details for Aphex Twin - Selected Ambient Works Volume 2 ">Aphex Twin - Selected Ambient Works Volume 2 </a>
+</div>
+<a href="magnet:?xt=urn:btih:e70b2ff8885f7e1b9d739c4f35e26bae0f623447&amp;dn=Aphex+Twin+-+Selected+Ambient+Works+Volume+2+&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=udp%3A%2F%2Ftracker.ccc.de%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link"></a>			<a href="//torrents.thepiratebay.sx/8229175/Aphex_Twin_-_Selected_Ambient_Works_Volume_2_.8229175.TPB.torrent" title="Download this torrent"><img src="/static/img/dl.gif" class="dl" alt="Download"></a><img src="/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments."><img src="/static/img/11x11p.png"><font class="detDesc">Uploaded 03-07 19:19, Size 1.5 GiB, ULed by <a class="detDesc" href="/user/jasonvlo/" title="Browse jasonvlo">jasonvlo</a></font>
+		</td>
+		<td align="right">4</td>
+		<td align="right">1</td>
+	</tr>
+</table>
+</div>
+<div align="center">1 <a href="/search/aphex%20twin/1/7/0/">2</a> <a href="/search/aphex%20twin/2/7/0/">3</a> <a href="/search/aphex%20twin/3/7/0/">4</a> <a href="/search/aphex%20twin/1/7/0/"><img src="/static/img/next.gif" border="0" alt="Next"></a> 
+</div>
+			<div class="ads" id="sky-banner">
+				 <iframe src="http://cdn1.adexprt.com/exo_na/sky1.html" width="120" height="600" frameborder="0" scrolling="no"></iframe>
+			</div>
+	</div></div>
+<!-- //div:content -->
+
+	<div id="foot" style="text-align:center;margin-top:1em;">
+
+			 <iframe src="http://cdn2.adexprt.com/exo_na/bottom.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+				<p>
+			<a href="/login" title="Login">Login</a> | 
+			<a href="/register" title="Register">Register</a> | 
+			<a href="/language" title="Select language">Language / Select language</a> |
+			<a href="/about" title="About">About</a> |
+			<a href="/legal" title="Legal threats">Legal threats</a> |
+			<a href="/blog" title="Blog">Blog</a>
+			<br><a href="/contact" title="Contact us">Contact us</a> |
+			<a href="/policy" title="Usage policy">Usage policy</a> |
+			<a href="/downloads" title="Downloads">Downloads</a> |
+			<a href="http://www.promobay.org/" title="Promo" target="_NEW">Promo</a> |
+			<a href="/doodles" title="Doodles">Doodles</a> |
+			<a href="/tags" title="Tag Cloud">Tag Cloud</a> |
+			<a href="http://suprbay.org/" title="Forum" target="_blank">Forum</a> |
+			<a href="http://piratebrowser.com/" title="PirateBrowser" target="_blank"><strong>PirateBrowser</strong></a>
+			<br><a href="http://bayfiles.net" title="Bayfiles" target="_blank">Bayfiles</a> |
+			<a href="http://bayimg.com" title="BayImg" target="_blank">BayImg</a> |
+			<a href="http://pastebay.net" title="PasteBay" target="_blank">PasteBay</a> |
+			<a href="http://uberproxy.net" title="Proxy" target="_blank">Proxy</a> |
+			<a href="https://twitter.com/tpbdotorg" title="Twitter" target="_blank">Follow TPB on Twitter</a> |
+			<a href="https://www.facebook.com/ThePirateBayWarMachine" title="Facebook" target="_blank">Follow TPB on Facebook</a>
+			<br></p>
+
+<p id="footer" style="color:#666; font-size:0.9em; ">
+        6.365.942 registered users. Last updated 22:50:05.<br>
+        42.182.261 peers (32.589.583 seeders + 9.592.678 leechers) in 5.276.163 torrents.<br></p>
+<br><a href="http://bitcoin.org" target="_NEW">BitCoin</a>: <b><a href="bitcoin:1KeBs4HBQzkdHC2ou3gpyGHqcL7aKzwTve">1KeBs4HBQzkdHC2ou3gpyGHqcL7aKzwTve</a></b><br><a href="http://litecoin.org" target="_NEW">LiteCoin</a>: <a href="litecoin:LiYp3Dg11N5BgV8qKW42ubSZXFmjDByjoV">LiYp3Dg11N5BgV8qKW42ubSZXFmjDByjoV</a><br><br><br><img src="/static/img/btcltc.png"><br><br><div id="fbanners">
+			<a href="/rss" class="rss" title="RSS"><img src="/static/img/rss_small.gif" alt="RSS"></a>
+		</div>
+<!-- // div:fbanners -->
+	</div>
+<!-- // div:foot -->
+<script type="text/javascript" src="/static/js/popw130826.js"></script><script type="text/javascript" src="/static/js/poptest.js"></script><!-- abc: BE 0 -->
+</body>
+</html>

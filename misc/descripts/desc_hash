@@ -1,0 +1,13 @@
+results {
+  1 {
+      Trusted: boolean
+      Name: string
+      Category: symbol
+      Size: MB
+      Ratio {
+        Seeders: int
+        Leechers: int
+        Ratio: seeders/leechers
+      }
+    }
+}
