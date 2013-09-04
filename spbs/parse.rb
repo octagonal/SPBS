@@ -1,8 +1,8 @@
 string = ARGV[0]
-
+puts string
 arr = string.scan(/(%(\d+),(\d+)%)/).reverse
+p arr
 
-p arr.inspect
 def form_query(iteration,match,string)
   (match[iteration][1]..match[iteration][2]).each do |n|
     parsed = ''
@@ -15,11 +15,14 @@ def form_query(iteration,match,string)
   end
 end
 
-form_query(arr.size-1,arr,string)
+if !arr.empty?
+  puts true
+  form_query(arr.size-1,arr,string)
+end
 
-query = Query.new(ARGV[0])
-query.search
-
+#query = Query.new(ARGV[0])
+#query.search
+=begin
 class Query
   attr_accessor category, init_sort, set
 
@@ -34,12 +37,13 @@ class Query
   end
 
   def each
-    self.set.each |part|
+    self.set.each do |part|
       yield(n)
     end
   end
 
   def search
-      seld.each do { |part| find_torrent(part)}
+      self.each { |part| find_torrent(part)}
   end
 end
+=end
