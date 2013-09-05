@@ -39,7 +39,7 @@ module SPBS
     end
 
     def default
-      YAML.load_file("../config.yml")
+      YAML.load_file("config.yml")
     end
   end
 end
