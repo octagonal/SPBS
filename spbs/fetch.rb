@@ -5,6 +5,7 @@ require_relative 'result.rb'
 module SPBS
 
   class Fetch
+    include Enumerable
     BASE_URL = "http://thepiratebay.sx/search/"
     attr_reader :request, :amount, :resultset
 
@@ -12,6 +13,10 @@ module SPBS
       @resultset = Array.new
       pop_resultset(args)
       @amount    = 5
+    end
+
+    def each
+      resultset.each {|result| yield(result)}
     end
 
     def pop_resultset(queries)
@@ -26,7 +31,6 @@ module SPBS
         doc = Nokogiri::HTML(open(request.url))
         torrents = doc.css("#searchResult > tr")
 
-        #Here's to hoping nobody will ever read this disastercode
         request.add_node(@amount) do |node,n|
           torrent               = torrents[n]
           node.name             = torrent.css("td")[1].css("div.detName a")[0].inner_text
